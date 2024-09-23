@@ -10,8 +10,8 @@
 
 [Desafio backend](https://github.com/CollabCodeTech/backend-challenges?tab=readme-ov-file)
 
-[Chalenges](https://github.com/backend-br/desafios)
-[RentHouse](https://github.com/sahandghavidel/mern-estate)
+[Challenges](https://github.com/backend-br/desafios)
+[Rent House](https://github.com/sahandghavidel/mern-estate)
 
 ## 🚀 Sobre o Desafio
 
