@@ -1,0 +1,9 @@
+GitHub - Uma plataforma de hospedagem de código onde desenvolvedores podem colaborar em projetos e compartilhar suas criações.
+
+Stack Overflow - Uma comunidade onde programadores fazem perguntas e compartilham respostas sobre problemas de codificação e desenvolvimento.
+
+Dev.to - Uma rede social voltada para desenvolvedores, onde podem compartilhar artigos, tutoriais e dicas sobre programação.
+
+Reddit - Subreddits como r/programming e r/learnprogramming oferecem discussões e recursos sobre várias linguagens e tecnologias.
+
+Twitter - Muitos desenvolvedores e empresas compartilham dicas, novidades e tendências em tecnologia através de suas contas.
