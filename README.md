@@ -6,17 +6,17 @@
 
 
 <!-- Sobre o Projeto -->
-## Links úteis
-
+<!-- ## Links úteis -->
+<!-- 
 [Desafio backend](https://github.com/CollabCodeTech/backend-challenges?tab=readme-ov-file)
 
 [Challenges](https://github.com/backend-br/desafios)
-[Rent House](https://github.com/sahandghavidel/mern-estate)
+[Rent House](https://github.com/sahandghavidel/mern-estate) -->
 
 ## 🚀 Sobre o Desafio
 
 #### Crie, utilizando React com Redux, uma lista de tarefas (Todo), onde deverá ser possível:
-
+<!-- 
 - Listar Todas as Tarefas
 - Listar as tarefas ainda não concluídas
 - Listar as tarefas já concluídas
@@ -37,4 +37,4 @@ Obs[4]: Design/Layout livre
 Pontos que serão avaliados:
 - Qualidade do Código
 - Design/Layout da aplicação
-- Componentização
+- Componentização -->
