@@ -13,10 +13,10 @@
 [Challenges](https://github.com/backend-br/desafios)
 [Rent House](https://github.com/sahandghavidel/mern-estate) -->
 
-## 🚀 Sobre o Desafio
+<!-- ## 🚀 Sobre o Desafio
 
 #### Crie, utilizando React com Redux, uma lista de tarefas (Todo), onde deverá ser possível:
-<!-- 
+<!--  -->
 - Listar Todas as Tarefas
 - Listar as tarefas ainda não concluídas
 - Listar as tarefas já concluídas
