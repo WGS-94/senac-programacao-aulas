@@ -16,7 +16,7 @@
 <!-- ## 🚀 Sobre o Desafio
 
 #### Crie, utilizando React com Redux, uma lista de tarefas (Todo), onde deverá ser possível:
-<!--  -->
+
 - Listar Todas as Tarefas
 - Listar as tarefas ainda não concluídas
 - Listar as tarefas já concluídas
