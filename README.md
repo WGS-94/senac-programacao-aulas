@@ -2,7 +2,10 @@
 <h1 align="center"> Programa-3000-Talentos-TI 🔥</h1>
 
 <!-- Subtitle -->
-<h2> Desafio - </h2>
+<h2>Introdução ao desenvolvimento com JavaScript</h2>
+
+- Aprendemos sobre GIT e Github
+- Soft Skill
 
 
 <!-- Sobre o Projeto -->
