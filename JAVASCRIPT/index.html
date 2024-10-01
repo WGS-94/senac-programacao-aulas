@@ -1,13 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <p>Hello World</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab, perspiciatis cum labore sint laboriosam quisquam aperiam, impedit voluptatum laudantium iure nobis. Cumque laudantium iusto necessitatibus voluptatibus eligendi nesciunt facere ut?</p>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    input,
+    select {
+      margin: 10px 0;
+    }
+
+    .container {
+      display: flex;
+      /* flex-direction: column; */
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      height: 90vh;
+    }
+
+    .container div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      /* border: 1px solid red; */
+      background-color: blanchedalmond;
+      border-radius: 8px;
+      padding: 22px;
+      height: 35%;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div>
+        <h2>Operadores</h2>
+        <p>Let´s see the operators in JavaScript</p>
+        <br />
+  
+        <label for="operation">Selecione a Operação:</label>
+        <select id="operation">
+          <option value="">Selecione a opção</option>
+          <option value="sum">Soma</option>
+          <option value="subtract">Subtração</option>
+          <option value="divide">Divisão</option>
+          <option value="multiply">Multiplicação</option>
+        </select>
+  
+        <div id="inputs" style="display: none">
+          <input type="number" id="firstNumber" placeholder="First Number">
+          <input type="number" id="secondNumber" placeholder="Second Number">
+          <button onclick="calculate()">Calculate</button>
+        </div>
+  
+        <h2 id="result"></h2>
+      </div>
+
+      <div>
+        <h2>Comparadores</h2>
+        <p>Let´s see the comparisons in JavaScript</p>
+        <br />
+  
+        <label for="comparison">Selecioone a Comparação:</label>
+        <select id="comparison">
+          <option value="">Selecione a opção</option>
+          <option value="equal">Igual (===)</option>
+          <option value="greater">Maior que (>)</option>
+          <option value="less">Menor que (<)</option>
+          <option value="notEqual">Diferente (!==)</option>
+          <option value="greaterEqual">Maior ou Igual que (≥)</option>
+          <option value="lessEqual">Menor ou Igual que (≤)</option>
+        </select>
+  
+        <div id="inputs_c" style="display:none;">
+          <input type="number" id="first" placeholder="First Number" />
+          <input type="number" id="second" placeholder="Second Number" />
+          <button onclick="compare()">Compare</button>
+        </div>
+  
+        <h2 id="resultComparison"></h2>
+      </div>
+
+      <div>
+        <h2>Comparadores Lógicos</h2>
+        <p>Let´s see the logical comparisons in JavaScript</p>
+        
+        <p style="font-weight: bold;">a=true ;  b=false ; c=true</p>
+        <br />
+        <!-- <br/> -->
+
+        <label for="comparison_logic">Selecioone o Comparador Lógico:</label>
+        <select id="comparison_logic">
+          <option value="">Selecione a opção</option>
+          <option value="a&&b">a&&b</option>
+          <option value="b&&c">b&&c</option>
+          <option value="a&&c">a&&c</option>
+          <option value="a&&b&&c">a&&b&&c</option>
+        </select>
+
+        <div style="display: none;">    
+           <h2>Valores</h2>
+          <input type="text" id="valueA" placeholder="Valor de a (true/false)">
+          <input type="text" id="valueB" placeholder="Valor de b (true/false)">
+          <input type="text" id="valueC" placeholder="Valor de c (true/false)">
+        </div>
+   
+        <button onclick="evaluateLogic()">Calcular</button>
+
+        <h2 id="resultComparisonLogic"></h2>
+      </div>
+    
+    </div>
     <script src="./index.js"></script>
-</body>
+    <script src="./calculo.js"></script>
+  </body>
 </html>

@@ -1,20 +1,109 @@
-const constante = 2050
+const operationSelect = document.getElementById('operation');
+const inputsDiv = document.getElementById('inputs');
 
-let nome = prompt("Qual seu nome?")
+operationSelect.addEventListener('change', function () {
+    inputsDiv.style.display = this.value ? 'block' : 'none';
+});
 
-console.log("Seja bem vindo", nome)
+function calculate() {
 
-let nascimento = prompt("Qual ano você nasceu?")
+    const firstNumber = parseFloat(document.getElementById('firstNumber').value);
+    const secondNumber = parseFloat(document.getElementById('secondNumber').value);
 
-nascimento = Number(nascimento)
+    const operation = operationSelect.value;
 
-console.log("Idade:", 2023 - nascimento)
+    let result;
 
-let ano = prompt("Em que ano estamos?")
+    if (operation === 'sum') {
+        result = firstNumber + secondNumber;
+    } else if (operation === 'subtract') {
+        result = firstNumber - secondNumber;
+    } else if (operation === 'divide') {
+        if (secondNumber === 0) {
+            result = 'Error: Cannot divide by zero';
+        } else {
+            result = firstNumber / secondNumber;
+        }
+    } else if(operation ===  'multiply') {
+        result = firstNumber * secondNumber;
+    }else {
+        result = 'Please select a valid operation';
+    }
 
-ano = Number(ano)
+    document.getElementById('result').innerText = 'Result: ' + result;
+}
 
-console.log("É maior de idade?", ano >= nascimento)
 
-console.log("Idade em 2050:", constante - nascimento)
+const comparisonSelect = document.getElementById('comparison');
+const inputsComparison = document.getElementById('inputs_c');
 
+comparisonSelect.addEventListener('change', function () {
+    inputsComparison.style.display = this.value ? 'block' : 'none';
+});
+
+function compare() {
+
+    const firstNumber = parseFloat(document.getElementById('first').value);
+    const secondNumber = parseFloat(document.getElementById('second').value);
+
+    console.log(firstNumber, secondNumber)
+
+    const operation = comparisonSelect.value;
+    let result;
+
+    switch (operation) {
+        case 'equal':
+            result = firstNumber === secondNumber;
+            break;
+        case 'greater':
+            result = firstNumber > secondNumber;
+            break;
+        case 'less':
+            result = firstNumber < secondNumber;
+            break;
+        case 'notEqual':
+            result = firstNumber !== secondNumber;
+            break;
+        case 'greaterEqual':
+            result = firstNumber >= secondNumber;
+            break;
+        case 'lessEqual':
+            result = firstNumber <= secondNumber;
+            break;
+        default:
+            result = 'Please select a valid comparison';
+            break;
+    }
+
+    document.getElementById('resultComparison').innerText = 'Result: ' + result;
+}
+
+function evaluateLogic() {
+
+    const logicSelect = document.getElementById('comparison_logic').value;
+    
+    const a = document.getElementById('valueA').value.toLowerCase() === 'true';
+    const b = document.getElementById('valueB').value.toLowerCase() === 'false';
+    const c = document.getElementById('valueC').value.toLowerCase() === 'true';
+    let result;
+
+    switch (logicSelect) {
+        case 'a&&b':
+            result = a && b;
+            break;
+        case 'b&&c':
+            result = b && c;
+            break;
+        case 'a&&c':
+            result = a && c;
+            break;
+        case 'a&&b&&c':
+            result = a && b && c;
+            break;
+        default:
+            result = 'Por favor, selecione uma opção válida';
+            break;
+    }
+
+    document.getElementById('resultComparisonLogic').innerText = 'Resultado: ' + result;
+}
