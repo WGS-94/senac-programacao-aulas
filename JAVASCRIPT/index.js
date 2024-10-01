@@ -82,9 +82,9 @@ function evaluateLogic() {
 
     const logicSelect = document.getElementById('comparison_logic').value;
     
-    const a = document.getElementById('valueA').value.toLowerCase() === 'true';
-    const b = document.getElementById('valueB').value.toLowerCase() === 'false';
-    const c = document.getElementById('valueC').value.toLowerCase() === 'true';
+    const a = document.getElementById('valueA').value.toLowerCase() === true;
+    const b = document.getElementById('valueB').value.toLowerCase() === false;
+    const c = document.getElementById('valueC').value.toLowerCase() === true;
     let result;
 
     switch (logicSelect) {
@@ -106,4 +106,30 @@ function evaluateLogic() {
     }
 
     document.getElementById('resultComparisonLogic').innerText = 'Resultado: ' + result;
+}
+
+function exercice_aula() {
+
+    const from_year = 2024;
+    const to_year = 2050;
+
+    const name = document.getElementById('name').value;
+    const age = document.getElementById('age').value;
+
+    if(age >= 18) {
+        result = true
+    }else {
+        result = false
+    }
+
+    // (2050 - 2024) + 20, em 2050 ela terá 46 anos
+
+    const verify = (to_year - from_year ) + parseInt(age);
+
+    console.log(verify)
+
+    // Result
+    document.getElementById('resultName').innerText = `Nome: ${name}`
+    document.getElementById('resultAge').innerText = `Você é maior de idade? ${result}`
+    document.getElementById('resultExercise5').innerText = 'Idade em 2050: ' + verify;
 }

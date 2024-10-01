@@ -24,7 +24,7 @@
       height: 90vh;
     }
 
-    .container div {
+    .container > div {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -40,6 +40,21 @@
       flex-direction: column;
       gap: 10px;
     }
+
+    .my_inputs {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .my_result {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+
+    }
   </style>
   <body>
     <div class="container">
@@ -47,7 +62,7 @@
         <h2>Operadores</h2>
         <p>Let´s see the operators in JavaScript</p>
         <br />
-  
+
         <label for="operation">Selecione a Operação:</label>
         <select id="operation">
           <option value="">Selecione a opção</option>
@@ -56,13 +71,13 @@
           <option value="divide">Divisão</option>
           <option value="multiply">Multiplicação</option>
         </select>
-  
+
         <div id="inputs" style="display: none">
-          <input type="number" id="firstNumber" placeholder="First Number">
-          <input type="number" id="secondNumber" placeholder="Second Number">
+          <input type="number" id="firstNumber" placeholder="First Number" />
+          <input type="number" id="secondNumber" placeholder="Second Number" />
           <button onclick="calculate()">Calculate</button>
         </div>
-  
+
         <h2 id="result"></h2>
       </div>
 
@@ -70,7 +85,7 @@
         <h2>Comparadores</h2>
         <p>Let´s see the comparisons in JavaScript</p>
         <br />
-  
+
         <label for="comparison">Selecioone a Comparação:</label>
         <select id="comparison">
           <option value="">Selecione a opção</option>
@@ -81,21 +96,21 @@
           <option value="greaterEqual">Maior ou Igual que (≥)</option>
           <option value="lessEqual">Menor ou Igual que (≤)</option>
         </select>
-  
-        <div id="inputs_c" style="display:none;">
+
+        <div id="inputs_c" style="display: none">
           <input type="number" id="first" placeholder="First Number" />
           <input type="number" id="second" placeholder="Second Number" />
           <button onclick="compare()">Compare</button>
         </div>
-  
+
         <h2 id="resultComparison"></h2>
       </div>
 
       <div>
         <h2>Comparadores Lógicos</h2>
         <p>Let´s see the logical comparisons in JavaScript</p>
-        
-        <p style="font-weight: bold;">a=true ;  b=false ; c=true</p>
+
+        <p style="font-weight: bold">a=true ; b=false ; c=true</p>
         <br />
         <!-- <br/> -->
 
@@ -108,19 +123,49 @@
           <option value="a&&b&&c">a&&b&&c</option>
         </select>
 
-        <div style="display: none;">    
-           <h2>Valores</h2>
-          <input type="text" id="valueA" placeholder="Valor de a (true/false)">
-          <input type="text" id="valueB" placeholder="Valor de b (true/false)">
-          <input type="text" id="valueC" placeholder="Valor de c (true/false)">
+        <div style="display: none">
+          <h2>Valores</h2>
+          <input
+            type="text"
+            id="valueA"
+            placeholder="Valor de a (true/false)"
+          />
+          <input
+            type="text"
+            id="valueB"
+            placeholder="Valor de b (true/false)"
+          />
+          <input
+            type="text"
+            id="valueC"
+            placeholder="Valor de c (true/false)"
+          />
         </div>
-   
+
         <button onclick="evaluateLogic()">Calcular</button>
 
         <h2 id="resultComparisonLogic"></h2>
       </div>
-    
+
+      <div>
+        <h2>Exercício 5</h2>
+        <p>Let´s do the execrcice in JavaScript</p>
+
+        <div class="my_inputs">
+          <input type="text" id="name" placeholder="Digite seu nome" />
+          <input type="number" id="age" placeholder="Digite sua idade" />
+          <button onclick="exercice_aula()">Mostrar</button>
+        </div>
+
+        <div class="my_result">
+          <span style="text-align: left; font-weight: bold;" id="resultName"></span>
+          <span style="font-weight: bold;" id="resultAge"></span>
+          <span style="font-weight: bold;" id="resultExercise5"></span>
+        </div>
+        
+      </div>
     </div>
+
     <script src="./index.js"></script>
     <script src="./calculo.js"></script>
   </body>
