@@ -20,14 +20,14 @@ function calculate() {
         result = firstNumber - secondNumber;
     } else if (operation === 'divide') {
         if (secondNumber === 0) {
-            result = 'Error: Cannot divide by zero';
+            result = 'Error: Não pode dividir por zero';
         } else {
             result = firstNumber / secondNumber;
         }
     } else if(operation ===  'multiply') {
         result = firstNumber * secondNumber;
     }else {
-        result = 'Please select a valid operation';
+        result = 'Por favor, selecione uma opção válida';
     }
 
     document.getElementById('result').innerText = 'Result: ' + result;
@@ -71,7 +71,7 @@ function compare() {
             result = firstNumber <= secondNumber;
             break;
         default:
-            result = 'Please select a valid comparison';
+            result = 'Por favor, selecione uma opção válida';
             break;
     }
 
@@ -132,4 +132,29 @@ function exercice_aula() {
     document.getElementById('resultName').innerText = `Nome: ${name}`
     document.getElementById('resultAge').innerText = `Você é maior de idade? ${result}`
     document.getElementById('resultExercise5').innerText = 'Idade em 2050: ' + verify;
+}
+
+
+
+function converter() {
+
+    const operationConvert = document.getElementById('operationConvert').value;
+    const  myValue = parseFloat(document.getElementById('value').value);   
+    let result;
+
+    console.log(operationConvert, myValue)
+    
+    console.log((parseFloat(myValue) - 32)*(5/9) + 273.15)
+
+    if (operationConvert === 'fahrenheit') {
+        result = (myValue - 32)*(5/9) + 273.15;
+    } else if (operationConvert === 'celcius') {
+        result = (myValue)*(9/5) + 32;
+    } else{
+        result = 'Por favor, selecione uma opção válida';
+    }
+
+    document.getElementById('resultConvert').innerText = 'Resultado: ' + result.toFixed(2);
+
+
 }

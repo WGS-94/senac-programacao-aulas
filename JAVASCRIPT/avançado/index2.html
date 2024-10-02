@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lógica de programação</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    input,
+    select {
+      margin: 10px 0;
+    }
+
+    .secao4 {
+      margin: 0;
+      font-family: Helvetica, sans-serif;
+    }
+
+    .secao4-div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .secao4-div-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: calc(100% / 4 - 60px);
+      margin: 10px;
+      padding: 20px;
+      box-shadow: 2px 2px 16px 0px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      background-color: blanchedalmond;
+      transition: all 0.5s ease;
+    }
+
+    .secao4-div-card img {
+      width: 35%;
+      height: auto;
+    }
+
+    .secao4-div-card h3 {
+      margin-bottom: 0px;
+    }
+
+    .my_result {
+      margin: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+    }
+
+    /* Estilos para dispositivos móveis */
+    @media (max-width: 768px) {
+      .secao4-div-card {
+        width: 100%;
+      }
+    }
+
+  </style>
+  <body>
+    <section class="secao4" id="sobre">
+      <div class="secao4-div">
+          <!-- Card 1 -->
+          <div class="secao4-div-card">
+            <h2>Operadores</h2>
+            <p>Let´s see the operators in JavaScript</p>
+            <br />
+    
+            <label for="operation">Selecione a Operação:</label>
+            <select id="operation">
+              <option value="">Selecione a opção</option>
+              <option value="sum">Soma</option>
+              <option value="subtract">Subtração</option>
+              <option value="divide">Divisão</option>
+              <option value="multiply">Multiplicação</option>
+            </select>
+    
+            <div id="inputs" style="display: none">
+              <input type="number" id="firstNumber" placeholder="First Number" />
+              <input type="number" id="secondNumber" placeholder="Second Number" />
+              <button onclick="calculate()">Calculate</button>
+            </div>
+    
+            <h2 id="result"></h2>
+          </div>
+  
+          <!-- Card 2 -->
+          <div class="secao4-div-card">
+            <h2>Comparadores</h2>
+            <p>Let´s see the comparisons in JavaScript</p>
+            <br />
+
+            <label for="comparison">Selecioone a Comparação:</label>
+            <select id="comparison">
+              <option value="">Selecione a opção</option>
+              <option value="equal">Igual (===)</option>
+              <option value="greater">Maior que (>)</option>
+              <option value="less">Menor que (<)</option>
+              <option value="notEqual">Diferente (!==)</option>
+              <option value="greaterEqual">Maior ou Igual que (≥)</option>
+              <option value="lessEqual">Menor ou Igual que (≤)</option>
+            </select>
+
+            <div id="inputs_c" style="display: none">
+              <input type="number" id="first" placeholder="First Number" />
+              <input type="number" id="second" placeholder="Second Number" />
+              <button onclick="compare()">Compare</button>
+            </div>
+
+            <h2 id="resultComparison"></h2>
+          </div>
+  
+          <!-- Card 3 -->
+          <div class="secao4-div-card">
+            <h2>Comparadores Lógicos</h2>
+            <p>Let´s see the logical comparisons in JavaScript</p>
+    
+            <p style="font-weight: bold">a=true ; b=false ; c=true</p>
+            <br />
+            <!-- <br/> -->
+    
+            <label for="comparison_logic">Selecioone o Comparador Lógico:</label>
+            <select id="comparison_logic">
+              <option value="">Selecione a opção</option>
+              <option value="a&&b">a&&b</option>
+              <option value="b&&c">b&&c</option>
+              <option value="a&&c">a&&c</option>
+              <option value="a&&b&&c">a&&b&&c</option>
+            </select>
+    
+            <div style="display: none">
+              <h2>Valores</h2>
+              <input
+                type="text"
+                id="valueA"
+                placeholder="Valor de a (true/false)"
+              />
+              <input
+                type="text"
+                id="valueB"
+                placeholder="Valor de b (true/false)"
+              />
+              <input
+                type="text"
+                id="valueC"
+                placeholder="Valor de c (true/false)"
+              />
+            </div>
+    
+            <button onclick="evaluateLogic()">Calcular</button>
+    
+            <h2 id="resultComparisonLogic"></h2>
+          </div>
+           <!-- Card 4 -->
+          <div class="secao4-div-card">
+            <h2>Exercício 5</h2>
+            <p>Let´s do the execrcice in JavaScript</p>
+    
+            <div class="my_inputs">
+              <input type="text" id="name" placeholder="Digite seu nome" />
+              <input type="number" id="age" placeholder="Digite sua idade" />
+              <button onclick="exercice_aula()">Mostrar</button>
+            </div>
+    
+            <div class="my_result">
+              <span style="font-weight: bold;" id="resultName"></span>
+              <span style="font-weight: bold;" id="resultAge"></span>
+              <span style="font-weight: bold;" id="resultExercise5"></span>
+            </div>
+          </div>
+
+           <!-- Card 4 -->
+          <div class="secao4-div-card">
+            <h2>Converter Graus de temperatura</h2>
+            <p>Let´s do the execrcice in JavaScript</p>
+
+            <label for="operationConvert">Selecione o tipo de grau:</label>
+            <select id="operationConvert">
+              <option value="">Selecione a opção</option>
+              <option value="fahrenheit">Graus Fahrenheit(°F) para Kelvin(K)</option>
+              <option value="celcius">Graus Celsius(°C) para Graus Fahrenheit (°C)</option>
+            </select>
+    
+            <div id="inputs_convert" style="display: block">
+              <input type="number" id="value" placeholder="Digite o valor" />
+              <button onclick="converter()">Converter</button>
+            </div>
+    
+            <h2 id="resultConvert"></h2>
+          </div>
+
+      </div>
+  </section>
+
+    <!-- <script src="./index.js"></script> -->
+    <script src="./calculo.js"></script>
+  </body>
+</html>
