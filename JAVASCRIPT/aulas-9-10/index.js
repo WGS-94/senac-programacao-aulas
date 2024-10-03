@@ -7,3 +7,4 @@ let nome = String(prompt("Qual seu nome?"));
 let cor = String(prompt("Qual a sua cor favorita"))
 
 console.log(`A  cor favorita do ${nome.toUpperCase()} é ${cor.toUpperCase()}`)
+console.log("A  cor favorita do " + nome.toUpperCase() + " é " + cor.toUpperCase() + " ") 
