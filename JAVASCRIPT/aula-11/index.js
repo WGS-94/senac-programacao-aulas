@@ -7,10 +7,14 @@ function  imprimeOlaMundo() {
     console.log("Olá mundo");
 }
 
-function imprimeOlaMundoTexto(texto) {
-    console.log(`${texto}`)
+// Exercício 2: Crie uma função que receba por parametro um nome e imprimea no console a mensagem 
+
+function imprimeOlaMundoTexto(nome) {
+    console.log(`${nome}`)
 }
 
 imprimeOlaMundo()
 
-imprimeOlaMundoTexto("Olá mundo, tudo bem?")
+imprimeOlaMundoTexto("Wilson")
+imprimeOlaMundoTexto("Angola")
+imprimeOlaMundoTexto("Brasil")
