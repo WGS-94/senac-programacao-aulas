@@ -18,3 +18,15 @@ imprimeOlaMundo()
 imprimeOlaMundoTexto("Wilson")
 imprimeOlaMundoTexto("Angola")
 imprimeOlaMundoTexto("Brasil")
+
+
+// Crie uma função que receba dois números e retorna a soma entre eles.
+
+function soma(a,b) {
+    const soma = a + b;
+    return soma
+}
+
+const resultado = soma(27,10)
+
+console.log(`Resultado: ${resultado}`)
