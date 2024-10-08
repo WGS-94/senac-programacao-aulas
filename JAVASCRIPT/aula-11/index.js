@@ -75,3 +75,26 @@ function recebaArrayAleatorio(data) {
 const resultadoArray = recebaArrayAleatorio(arrayAleatorio)
 
 console.log(resultadoArray)
+
+// Exercício 5 - Refazer o execício 2 com a sintaxe de expressões de função (expression function)
+
+let nome = 'João'
+
+let imprimeNome = function(nome) {
+    console.log(`${nome}`)
+}
+
+
+imprimeNome(nome)
+
+
+// Exercício 6 - Refazer o exercício 3 com a sintaxe de arrow function
+
+const somaArrowFuncion = (a,b) => {
+    const soma = a + b;
+    return soma
+}
+
+const resultadoSoma = somaArrowFuncion(27,10)
+
+console.log(`Resultado: ${resultadoSoma}`)
