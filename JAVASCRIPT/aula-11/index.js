@@ -20,7 +20,7 @@ imprimeOlaMundoTexto("Angola")
 imprimeOlaMundoTexto("Brasil")
 
 
-// Crie uma função que receba dois números e retorna a soma entre eles.
+// Exercício 3: Crie uma função que receba dois números e retorna a soma entre eles.
 
 function soma(a,b) {
     const soma = a + b;
