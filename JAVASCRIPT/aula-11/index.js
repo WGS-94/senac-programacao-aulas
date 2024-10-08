@@ -9,27 +9,27 @@ function  imprimeOlaMundo() {
 
 // Exercício 2: Crie uma função que receba por parametro um nome e imprimea no console a mensagem 
 
-// function imprimeOlaMundoTexto(nome) {
-//     console.log(`${nome}`)
-// }
+function imprimeOlaMundoTexto(nome) {
+    console.log(`${nome}`)
+}
 
-// imprimeOlaMundo()
+imprimeOlaMundo()
 
-// imprimeOlaMundoTexto("Wilson")
-// imprimeOlaMundoTexto("Angola")
-// imprimeOlaMundoTexto("Brasil")
+imprimeOlaMundoTexto("Wilson")
+imprimeOlaMundoTexto("Angola")
+imprimeOlaMundoTexto("Brasil")
 
 
 // Exercício 3: Crie uma função que receba dois números e retorna a soma entre eles.
 
-// function soma(a,b) {
-//     const soma = a + b;
-//     return soma
-// }
+function soma(a,b) {
+    const soma = a + b;
+    return soma
+}
 
-// const resultado = soma(27,10)
+const resultado = soma(27,10)
 
-// console.log(`Resultado: ${resultado}`)
+console.log(`Resultado: ${resultado}`)
 
 // Exercício 4 - Cria uma função que receba um array de números. Retorna um novo array com dois elementos: primeiro e último número do array recebido divididos por 2
 
@@ -45,11 +45,9 @@ const result =  recebaArray(array)
 
 console.log(`Resultado: ${result}`)
 
-
-
 /* 
     Exercício 4: Outra forma de fazer
-    
+
     P1: Digite o tamanho do array (n)
     P2: For -  i = 0 até n-1 - gera (n) valores ou numeros aleatorios
     P3: Armazene em um array todos os números aleatorios
