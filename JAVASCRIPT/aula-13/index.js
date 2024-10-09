@@ -75,6 +75,76 @@ const curso = {
     linguagens: ["JS", "CSS", "HTML"]
 }
 
-console.log(curso.linguagens[0]) 
+console.log(curso.linguagens[0])
 
 // Array de objetos [{ }]
+
+const professores = [
+    { nome: "Andrei", modulo: 1 },
+    { nome: "Vitor", modulo: 2 },
+    { nome: "Mina", modulo: 3 }
+]
+
+console.log(professores[1].nome)
+
+// Adicionando propriedades
+
+const novoCurso = {
+    nome: "Frontend",
+    linguagens: ["JS", "CSS", "HTML"]
+}
+
+// Notação de ponto: 
+curso.numeroEstudantes = 50
+// Notação de colchetes: 
+curso['numeroEstudantes'] = 50
+
+/*
+    Exercício 3 - Adicione ao objeto do exercício 1 uma lista com os nomes dos personagens do filme.
+
+        ● Acesse e imprima no console cada pessoa do elenco junto com seu respectivo personagem
+        ● Altere a primeira pessoa do elenco por "Xuxa".
+        ● Imprima no console todas as propriedades do objeto.    
+    
+*/
+
+filme.personagens = ['Will Dev', 'Morticia', 'Pugsley', 'Wednesday', 'Lurch']
+
+// a) Acesse e imprima no console cada pessoa do elenco junto com seu respectivo personagem
+console.log(`Elenco: ${filme["elenco"][0]} === Personagem: ${filme["personagens"][0]}`)
+
+// b) Altere a primeira pessoa do elenco por "Xuxa".
+filme["elenco"][0] = "Xuxa"
+
+// Imprima no console todas as propriedades do objeto. 
+console.log('Filme: ', filme)
+
+
+
+// Espalhamento ou Spread
+
+const usuario = {
+    nome: 'Prof',
+    idade: 25,
+    email: 'prof@senacrs.com.br',
+    cidade: 'São Paulo'
+}
+
+const novoUsuario = {
+    ...usuario,
+    nome: 'João',
+    idade: 28
+}
+
+console.log('Novo Usuário: ', novoUsuario)
+
+const novoFilme = {
+    ...filme,
+    personagens: ['Will Dev', 'Morticia', 'Pugsley', 'Wednesday', 'Lurch'],
+    direcao: 'Geo Systems Film'
+}
+
+console.log('Novo Filme: ', novoFilme)
+
+// Copiando arrays
+
