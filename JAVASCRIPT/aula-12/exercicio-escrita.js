@@ -39,7 +39,7 @@ console.log('SOBRE MIM: ', dadosPessoa(nomePessoa, idadePessoa, cidadePessoa, pr
 
 
 /* 
-    2. Escreva as funções explicadas abaixo:
+   Exercício 2 - Escreva as funções explicadas abaixo:
     
     a) Escreva uma função que receba 2 números como parâmetros, e, dentro da função, faça a soma das duas entradas e retorne o resultado. Invoque a função e imprima no console o resultado.
     
@@ -86,3 +86,43 @@ function mensagemInfo(mensagem) {
 }
 
 mensagemInfo("Olá, mundo!");
+
+/* 
+    Exercício 3 - Crie uma função para cada uma das operações básicas (soma, subtração, multiplicação e divisão).
+    Em seguida, peça para o usuário inserir dois números e chame essas 4 funções com esses valores 
+    inputados pelo usuário sendo o argumento. Por fim, mostre no console o resultado das operações:
+*/
+
+// RESULTADO
+
+function soma(num1, num2) {
+    return num1 + num2;
+}
+
+function subtracao(num1, num2) {
+    return num1 - num2;
+}
+
+function multiplicacao(num1, num2) {
+    return num1 * num2;
+}
+
+function divisao(num1, num2) {
+    
+    if (num2 === 0) {
+        return "Não é possível dividir por zero.";
+    }
+    return num1 / num2;
+}
+
+
+const numero1 = Number(prompt("Insira o primeiro número:"));
+const numero2 = Number(prompt("Insira o segundo número:"));
+
+
+console.log("Números inseridos: ", numero1, "e", numero2);
+
+console.log("Soma:", soma(numero1, numero2));
+console.log("Subtração:", subtracao(numero1, numero2));
+console.log("Multiplicação:", multiplicacao(numero1, numero2));
+console.log("Divisão:", divisao(numero1, numero2));
