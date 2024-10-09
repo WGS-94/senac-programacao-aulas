@@ -32,6 +32,8 @@ const soma = (a, b) => {
     return resultado
 }
 
+console.log('Resultado', soma(3,5))
+
 
 /* 
 
