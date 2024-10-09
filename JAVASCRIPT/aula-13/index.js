@@ -154,3 +154,37 @@ const listaDeNomes = ["Mika", "Paula", "Vitor"]
 const copiaListaDeNomes = [...listaDeNomes, 'Wilson']
 
 console.log(copiaListaDeNomes) 
+
+
+/* 
+    Exercício 4 - Crie uma função que receba um objeto de pessoa (Exercício 2) e crie um novo objeto mantendo as propriedades 
+    originais e acrescentando:
+        ○ Uma propriedade com a lista de suas comidas preferidas;
+        ○ Uma propriedade que seja um objeto, com nome e idade, para representar o melhor amigo da pessoa. 
+
+    Ainda na função, imprima no console as propriedades desse objeto seguindo o modelo abaixo:
+
+    "O nome da pessoa é ___ e suas comidas preferidas são ___, ___ e ___. Seu melhor amigo se chama ___ e tem ___ anos"
+*/
+
+const sobreAlguem = (params) => {
+    
+    const novaPessoa = {
+        ...params,
+        comidasPreferidas: ['Pizza', 'Fungi', 'Hambúrguer', 'Macarrão', 'Cachupa', 'Kizaca'],
+        melhorAmigo: {
+            nome: 'Podolski',
+            idade: 25,
+            hobbies: ['Dançar', 'Ler', 'Fazer exercícios', 'Assistir filmes']
+        }
+    }
+
+    const mensagem =  `O nome da pessoa é ${novaPessoa["nome"]} e suas comidas preferidas são ${novaPessoa["comidasPreferidas"][1]}, 
+        ${novaPessoa["comidasPreferidas"][4]} e ${novaPessoa["comidasPreferidas"][novaPessoa["comidasPreferidas"].length-1]}. Seu melhor amigo se chama ${novaPessoa["melhorAmigo"].nome}
+        e tem ${novaPessoa["melhorAmigo"].idade} anos`
+
+    return mensagem
+
+}
+
+console.log('Resultado: ', sobreAlguem(pessoa))
