@@ -46,9 +46,7 @@ const teoremaPitagoras = (cateto1, cateto2) => {
 
     const hipotenusa = Math.sqrt(cateto1 ** 2 + cateto2 **2)
 
-    const hipotenusa2 = cateto1*cateto1 + cateto2*cateto2
-
-    console.log(hipotenusa, hipotenusa2)
+    console.log(hipotenusa)
 
     return hipotenusa
 }
