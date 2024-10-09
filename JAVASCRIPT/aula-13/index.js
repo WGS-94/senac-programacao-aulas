@@ -28,6 +28,7 @@ console.log('Último(a) ator/atriz do filme: ', filme.elenco[filme.elenco.length
 console.log('Nome do filme: ', filme["nome"])
 console.log('Ano de lançamento: ', filme["ano"])
 console.log('Direção do filme: ', filme["direcao"])
+console.log('Tamanho do elenco: ', filme["elenco"].length)
 
 // Alterando valores e um objeto
 
@@ -148,3 +149,8 @@ console.log('Novo Filme: ', novoFilme)
 
 // Copiando arrays
 
+const listaDeNomes = ["Mika", "Paula", "Vitor"]
+
+const copiaListaDeNomes = [...listaDeNomes, 'Wilson']
+
+console.log(copiaListaDeNomes) 
