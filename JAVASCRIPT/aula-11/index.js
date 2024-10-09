@@ -87,7 +87,6 @@ let imprimeNome = function(nome) {
 
 imprimeNome(nome)
 
-
 // Exercício 6 - Refazer o exercício 3 com a sintaxe de arrow function
 
 const somaArrowFuncion = (a,b) => {
