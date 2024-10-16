@@ -132,3 +132,54 @@ switch (pokemon) {
     default:
         console.log('Pokémon não encontrado')
 }
+
+
+//   =============================== SWITCH CASE - FIM ======================================================
+
+
+//   =============================== Operadores Lógicos - INICIO ======================================================
+
+/**
+    Relembrando Operadores Lógicos
+
+        ○ && : AND - verdadeiro se ambos os operandos forem verdadeiros
+        ○ || : OR lógico: verdadeiro se um ou ambos os operandos forem verdadeiros
+        ○ ! : NOT negação - sua função é simplesmente inverter os valores. Ou seja, se o valor de entrada for VERDADEIRO, o
+        resultado será FALSO e se o valor de entrada for FALSO, o resultado será VERDADEIRO
+R
+ */
+
+//    =============================== Operadores Lógicos - FIM ======================================================
+
+
+/*
+    Exercício 5 - Uma pessoa pode estudar em uma faculdade se:
+
+        ● Tiver concluído o ensino médio
+        ● Tiver 18 anos ou mais
+        ● Não estiver cursando outra faculdade
+
+    Escreva uma função que receba estes parâmetros e devolva se a pessoa pode ou não estudar nesta faculdade.
+    Receba os dados do usuário pelo prompt e execute a função
+
+*/
+
+const concluiuEnsinoMedio = String(prompt('Já concluíu o ensino médio ?'))
+const tem18Anos = String(prompt('Qual é a sua iddae ?'))
+const estaCursandoOutraFaculdade = String(prompt('Está cursando outra faculdade ?'))
+
+const dadosUsuarioFaculdade = (concluiuEnsinoMedio, idade, estaCursandoOutraFaculdade) => {
+
+    if (
+        concluiuEnsinoMedio.toUpparcase() === 'SIM' &&
+        idade >= 18 &&
+        estaCursandoOutraFaculdade.toUpparcase() === 'NÃO'
+    ) {
+        return 'Pode estudar'
+    } else {
+        return 'Não pode estudar'
+    }
+
+}
+
+const resultadoFaculdade = dadosUsuarioFaculdade(concluiuEnsinoMedio, tem18Anos, estaCursandoOutraFaculdade)
