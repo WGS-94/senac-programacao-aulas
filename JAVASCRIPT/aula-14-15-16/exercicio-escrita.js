@@ -163,10 +163,25 @@ const quantidadeIngressos = parseInt(prompt("Quantidade de ingressos"))
 let valorTotal = resumoCalculoTotal(tipoJogo, etapaJogo, categoria, quantidadeIngressos);
 
 // Imprimindo as informações
-console.log(`Nome: ${nome}`);
-console.log(`Tipo de jogo: ${tipoJogo}`);
-console.log(`Etapa do jogo: ${etapaJogo}`);
-console.log(`Categoria: ${categoria}`);
-console.log(`Quantidade de ingressos: ${quantidadeIngressos}`);
-console.log(`Valor unitário do ingresso: R$ ${valorTotal / quantidadeIngressos}`);
-console.log(`Valor total a pagar: R$ ${valorTotal.toFixed(2)}`);
+
+if(tipoJogo === 'IN') {
+    console.log('====== Dados da compra ======')
+    console.log(`Nome: ${nome}`);
+    console.log(`Tipo de jogo: ${tipoJogo}`);
+    console.log(`Etapa do jogo: ${etapaJogo}`);
+    console.log(`Categoria: ${categoria}`);
+    console.log(`Quantidade de ingressos: ${quantidadeIngressos}`);
+    console.log('====== Valores ======')
+    console.log(`Valor unitário do ingresso: U$ ${(valorTotal / quantidadeIngressos).toFixed(2)}`);
+    console.log(`Valor total a pagar:U$ ${valorTotal.toFixed(2)}`);
+}else {
+    console.log('====== Dados da compra ======')
+    console.log(`Nome: ${nome}`);
+    console.log(`Tipo de jogo: ${tipoJogo}`);
+    console.log(`Etapa do jogo: ${etapaJogo}`);
+    console.log(`Categoria: ${categoria}`);
+    console.log(`Quantidade de ingressos: ${quantidadeIngressos}`);
+    console.log('====== Valores ======')
+    console.log(`Valor unitário do ingresso: U$ ${valorTotal / quantidadeIngressos}`);
+    console.log(`Valor total a pagar: U$ ${valorTotal.toFixed(2)}`);
+}
