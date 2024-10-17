@@ -27,13 +27,13 @@
 // const num1 = Number(prompt("Digite o primeiro número!"))
 // const num2 = Number(prompt("Digite o segundo número!"))
 
-// const compararNumeros = (num1, num2) => {
-//     if (num1 === num2) {
-//         return `Verdadeiro - ${num1} = ${num2}`
-//     } else {
-//         return `Falso - ${num1} != ${num2}`
-//     }
-// }
+const compararNumeros = (num1, num2) => {
+    if (num1 === num2) {
+        return `Verdadeiro - ${num1} = ${num2}`
+    } else {
+        return `Falso - ${num1} != ${num2}`
+    }
+}
 
 // const resultadoCompara = compararNumeros(num1, num2)
 
@@ -46,13 +46,13 @@
     ○ Se os números forem iguais, Retorna mensagens dizendo se os números são iguais ou diferentes
 */
 
-// const comparar2Numeros = (num1, num2) => {
-//     if (num1 === num2) {
-//         return `Os números são iguais - ${num1} e ${num2}`
-//     } else {
-//         return `Os números são diferentes - ${num1} e ${num2}`
-//     }
-// }
+const comparar2Numeros = (num1, num2) => {
+    if (num1 === num2) {
+        return `Os números são iguais - ${num1} e ${num2}`
+    } else {
+        return `Os números são diferentes - ${num1} e ${num2}`
+    }
+}
 
 // const resultado2Compara = comparar2Numeros(num1, num2)
 
@@ -66,15 +66,15 @@
     {maior/menor/igual} ao segundo número
 */
 
-// const comparaMaiorOuMenor = (num1, num2) => {
-//     if (num1 > num2) {
-//         return `O primeiro número é maior que o segundo - ${num1} > ${num2}`
-//     } else if (num1 < num2) {
-//         return `O primeiro número é menor que o segundo - ${num1} < ${num2}`
-//     } else {
-//         return `O primeiro número é igual ao segundo - ${num1} = ${num2}`
-//     }
-// }
+const comparaMaiorOuMenor = (num1, num2) => {
+    if (num1 > num2) {
+        return `O primeiro número é maior que o segundo - ${num1} > ${num2}`
+    } else if (num1 < num2) {
+        return `O primeiro número é menor que o segundo - ${num1} < ${num2}`
+    } else {
+        return `O primeiro número é igual ao segundo - ${num1} = ${num2}`
+    }
+}
 
 // const resultadoMaiorOuMenor = comparaMaiorOuMenor(num1, num2)
 
@@ -111,7 +111,7 @@
 
 */
 
-const pokemon = String(prompt('Digite o nome do pokemon'))
+// const pokemon = String(prompt('Digite o nome do pokemon'))
 
 const tipoPokemon = {
     'Bulbasauro': 'Planta e Veneno',
@@ -119,19 +119,19 @@ const tipoPokemon = {
     'Squirtle': 'Água',
 }
 
-switch (pokemon) {
-    case 'Bulbasauro':
-        console.log(`O tipo do ${pokemon} é: ${tipoPokemon['Bulbasauro']}`)
-        break;
-    case 'Charmander':
-        console.log(`O tipo do ${pokemon} é: ${tipoPokemon['Charmander']}`)
-        break;
-    case 'Squirtle':
-        console.log(`O tipo do ${pokemon} é: ${tipoPokemon['Squirtle']}`)
-        break;
-    default:
-        console.log('Pokémon não encontrado')
-}
+// switch (pokemon) {
+//     case 'Bulbasauro':
+//         console.log(`O tipo do ${pokemon} é: ${tipoPokemon['Bulbasauro']}`)
+//         break;
+//     case 'Charmander':
+//         console.log(`O tipo do ${pokemon} é: ${tipoPokemon['Charmander']}`)
+//         break;
+//     case 'Squirtle':
+//         console.log(`O tipo do ${pokemon} é: ${tipoPokemon['Squirtle']}`)
+//         break;
+//     default:
+//         console.log('Pokémon não encontrado')
+// }
 
 
 //   =============================== SWITCH CASE - FIM ======================================================
@@ -164,16 +164,16 @@ R
 
 */
 
-const concluiuEnsinoMedio = String(prompt('Já concluíu o ensino médio ?'))
+const concluiuEnsinoMedio = String(prompt('Já concluíu o ensino médio ? \n Digite S para Sim e N para Não')).toUpperCase()
 const tem18Anos = String(prompt('Qual é a sua iddae ?'))
-const estaCursandoOutraFaculdade = String(prompt('Está cursando outra faculdade ?'))
+const estaCursandoOutraFaculdade = String(prompt('Está cursando outra faculdade ? \n Digite S para Sim e N para Não')).toUpperCase()
 
 const dadosUsuarioFaculdade = (concluiuEnsinoMedio, idade, estaCursandoOutraFaculdade) => {
 
     if (
-        concluiuEnsinoMedio.toUpparcase() === 'SIM' &&
+        concluiuEnsinoMedio === 'S' &&
         idade >= 18 &&
-        estaCursandoOutraFaculdade.toUpparcase() === 'NÃO'
+        estaCursandoOutraFaculdade === 'N'
     ) {
         return 'Pode estudar'
     } else {
@@ -183,3 +183,4 @@ const dadosUsuarioFaculdade = (concluiuEnsinoMedio, idade, estaCursandoOutraFacu
 }
 
 const resultadoFaculdade = dadosUsuarioFaculdade(concluiuEnsinoMedio, tem18Anos, estaCursandoOutraFaculdade)
+console.log(resultadoFaculdade)

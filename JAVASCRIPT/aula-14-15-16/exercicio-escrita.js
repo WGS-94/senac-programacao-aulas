@@ -121,59 +121,52 @@ const verificaAssistirFilme = (genero, preco) => {
     pelo valor do dólar (considerar o dólar = R$4,10)
 */
 
-const nome = String(prompt("Nome completo"))
-const  tipoJogo = String(prompt("Tipo de jogo: IN para internacional e DO para doméstico ")).toUpperCase()
+// Definindo os valores dos ingressos
+const precos = {
+    IN: { 
+        SF: { 1: 1320, 2: 880, 3: 550, 4: 220 }, 
+        DT: { 1: 660, 2: 440, 3: 330, 4: 170 }, 
+        FI: { 1: 1980, 2: 1320, 3: 880, 4: 330 } 
+    },
+    DO: { 
+        SF: { 1: 1320, 2: 880, 3: 550, 4: 220 }, 
+        DT: { 1: 660, 2: 440, 3: 330, 4: 170 }, 
+        FI: { 1: 1980, 2: 1320, 3: 880, 4: 330 }  
+    },
+};
+
+const valorDolar = 4.10;
+
+// Função para calcular o preço total
+const resumoCalculoTotal = (tipoJogo, etapa, categoria, quantidade) => {
+
+    let precoUnitario = precos[tipoJogo][etapa][categoria];
+
+    console.log(precoUnitario)
+
+    // Se o jogo for internacional, multiplica pelo valor do dólar
+    if (tipoJogo === "IN") {
+        precoUnitario *= valorDolar;
+    }
+
+    return precoUnitario * quantidade;
+}       
+
+// Coletando informações do usuário
+const nome = String(prompt("Nome completo")).toUpperCase()
+const tipoJogo = String(prompt("Tipo de jogo: IN para internacional e DO para doméstico ")).toUpperCase()
 const etapaJogo = String(prompt("Etapa do jogo: SF para semi-final, DT para decisão de terceiro lugar e FI para final ")).toUpperCase()
 const categoria = parseInt(prompt("Categoria: 1, 2, 3 ou 4"))
 const quantidadeIngressos = parseInt(prompt("Quantidade de ingressos"))
 
-// console.log(dadosUsuario)
+// Calculando o valor total
+let valorTotal = resumoCalculoTotal(tipoJogo, etapaJogo, categoria, quantidadeIngressos);
 
-
-/*
-    ---Dados da compra--- 
-    Nome do cliente:  Soter Padua 
-    Tipo do jogo:  DO 
-    Etapa do jogo:  Final 
-    Categoria:  1 
-    Quantidade de Ingressos:  10 ingressos 
-    ---Valores--- 
-    Valor do ingresso:  R$ 1980
-    Valor total:  R$ 19800
-
-*/
-
-
-const resumo = (nome, tipoJogo, etapaJogo, categoria, quantidadeIngressos) => {
-    
-    let mensagem;
-
-    switch (categoria) {
-        case 1:
-            if(tipoJogo === 'DO' && etapaJogo === 'SF'){
-
-            }else if(tipoJogo === 'DO' && etapaJogo === 'SF'){
-
-            }else if(tipoJogo === 'DO' && etapaJogo === 'SF'){
-
-            }else {
-                return 'Dados inválidos'
-            }
-            mensagem = 'Bom Dia!'
-            break;
-        case 2:
-            mensagem = 'Boa Tarde!'
-            break;
-        case 3:
-            mensagem = 'Boa Noite!'
-            break;
-        case 4:
-            mensagem = 'Boa Noite!'
-            break;
-        default:
-            mensagem = 'Turno inválido'
-            break;
-    }
-
-    return mensagem;
-}       
+// Imprimindo as informações
+console.log(`Nome: ${nome}`);
+console.log(`Tipo de jogo: ${tipoJogo}`);
+console.log(`Etapa do jogo: ${etapaJogo}`);
+console.log(`Categoria: ${categoria}`);
+console.log(`Quantidade de ingressos: ${quantidadeIngressos}`);
+console.log(`Valor unitário do ingresso: R$ ${valorTotal / quantidadeIngressos}`);
+console.log(`Valor total a pagar: R$ ${valorTotal.toFixed(2)}`);
