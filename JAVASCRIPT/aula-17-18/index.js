@@ -138,6 +138,14 @@ for (let numero of numeross) {
 
 const palavras =  ["Oi", "sumido", "tudo", "bem?", "Saudades"]
 
-for (let palavra of palavras) {
-    console.log(palavra)
+const minhasPalavras = (palavras) => {
+    let palavraFinal = ''
+    for (let palavra of palavras) {
+        palavraFinal = palavraFinal +  palavra  + ' '
+    }
+
+    return palavraFinal
 }
+
+const resultadoFinal = minhasPalavras(palavras)
+console.log(resultadoFinal) // Oi sumido tudo bem? Saudades
