@@ -16,32 +16,32 @@
 
 // RESOLUÇÃO
 
-// const controleBichinhos = () => {
+const controleBichinhos = () => {
 
-//     const qtdeBichinhos = Number(prompt("Quantos bichinhos de estimação você tem ?"));
+    const qtdeBichinhos = Number(prompt("Quantos bichinhos de estimação você tem ?"));
 
-//     // a)
-//     if(qtdeBichinhos === 0){
-//         return `😔 Que pena! Você pode adotar um pet!` 
-//     }
+    // a)
+    if(qtdeBichinhos === 0){
+        return `😔 Que pena! Você pode adotar um pet!` 
+    }
 
-//     // b)
-//     const nomesBichinhos = [];
+    // b)
+    const nomesBichinhos = [];
 
-//     for(let i = 0; i < qtdeBichinhos; i++){
+    for(let i = 0; i < qtdeBichinhos; i++){
 
-//         const nomeBichinho = prompt(`Qual o nome do seu ${i+1}º`)
+        const nomeBichinho = prompt(`Qual o nome do seu ${i+1}º`)
 
-//         nomesBichinhos.push(nomeBichinho);
-//     }
+        nomesBichinhos.push(nomeBichinho);
+    }
 
-//     // c)
-//     return nomesBichinhos;
+    // c)
+    return nomesBichinhos;
 
-// }
+}
 
-// const nomesBichinhos = controleBichinhos();
-// console.log(JSON.stringify(nomesBichinhos))
+const nomesBichinhos = controleBichinhos();
+console.log(JSON.stringify(nomesBichinhos))
 
 /*
     EXERCICIO 2 - Considere que você tenha acesso a um `array`  (chamado de 'array original') que é composto somente de números. 
@@ -130,7 +130,7 @@ const maiorMenor = (array) => {
         }
     }
 
-    return [maior, menor]
+    return `O maior número é ${maior} e o menor é ${menor}`
 
 }
 
