@@ -110,7 +110,28 @@ const criarStrings = (array)  => {
     return novoArray
 }
 
-
 console.log(criarStrings(arrayOriginal))
 
-// e) 
+// e) Escreva um programa que imprima no console o maior e o menor números contidos no array original
+
+const maiorMenor = (array) => {
+    
+    let maior = array[0]
+    let menor = array[0]
+
+    for(let i = 1; i < array.length; i++){
+        
+        if(array[i] > maior){
+            maior = array[i]
+        }
+
+        if(array[i] < menor){
+            menor = array[i]
+        }
+    }
+
+    return [maior, menor]
+
+}
+
+console.log(maiorMenor(arrayOriginal))
