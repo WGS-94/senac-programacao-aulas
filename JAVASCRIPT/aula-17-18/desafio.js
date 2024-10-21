@@ -42,26 +42,66 @@ while(continuar){
     //  2 - A partir daí, será solicitado, ao segundo jogador, que ele
     const p2 = Number(prompt("Adivinhe o número que eu digitei"))
 
+    tentativas += 1
+
     if(p1 === p2){
         console.log("Acertou!!")
         console.log(`O número de chutes/tentativas foi: ${tentativas}`)
-        continuar = false
+        continuar = false  // Encerra o loop
     }
 
     if(p1 > p2){
         console.log(`O número chutado foi: ${p2}`)
         console.log("Errrrrrrrou. O número escolhido é maior")
-        tentativas += 1
     }
 
     if(p1 < p2){
         console.log(`O número chutado foi: ${p2}`)
         console.log("Errrrrrrrou. O número escolhido é menor")
-        tentativas += 1
     }
 
 }
 
+/*
+    EXERCICIO 2 - Uma das principais características de uma boa pessoa programadora é conseguir resolver seus problemas independentemente.
+    Queremos que você comece a treinar isso a partir de hoje! Então, vamos pedir para que você faça uma alteração no código acima. 
+    Agora, ao invés de ter 2 jogadores, haverá um só; e o seu adversário será o computador. A ideia é: ao iniciar o jogo, você deve 
+    sortear um número aleatório (entre 1 e 100) e o usuário terá que ficar chutando o valor até acertar. Mantenha as demais funcionalidades 
+    e mensagens pedidas no exercício anterior.
+    
+    Quando resolver o exercício, pare e faça a seguinte reflexão: foi fácil fazer esta alteração? O que você poderia ter feito para que fosse mais fácil? 
+    **Deixe comentários no seu código sobre esta reflexão.**
+*/
 
+//  1 - Solicitar que o primeiro jogador escolha um número 
 
+let keepingOn = true;
+let userTry = 0;
 
+// 1 - Sortear um número aleatório entre 1 e 100
+const numeroAleatorio = Math.floor(Math.random() * 100) + 1; // Número aleatório entre 1 e 100
+console.log("Vamos jogar!");
+
+while (keepingOn) {
+    // 2 - Solicitar que o usuário chute um número
+    const p2 = Number(prompt("Adivinhe o número que o computador escolheu (entre 1 e 100)"));
+
+    // Incrementa o número de tentativas
+    userTry += 1;
+
+    if (numeroAleatorio === p2) {
+        console.log("Acertou!!");
+        console.log(`O número de chutes/tentativas foi: ${userTry}`);
+        keepingOn = false; // Encerra o loop
+    }
+    
+    if (numeroAleatorio > p2) {
+        console.log(`O número chutado foi: ${p2}`);
+        console.log("Errrrrrrrou. O número escolhido é maior");
+    } 
+    
+    if(numeroAleatorio < p2){
+        console.log(`O número chutado foi: ${p2}`);
+        console.log("Errrrrrrrou. O número escolhido é menor");
+    }
+}
